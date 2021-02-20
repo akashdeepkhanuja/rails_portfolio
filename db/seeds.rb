@@ -37,4 +37,4 @@ puts "5 skills created"
       thumb_image: "https://via.placeholder.com/350x200"
 
   	)
-end
+end 
