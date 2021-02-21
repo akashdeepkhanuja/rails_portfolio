@@ -9,12 +9,11 @@
 
 <% @portfolio_items.each do |k| %>
 
-	<%=k.title%><br>
+	<h3><%= link_to k.title, portfolio_path(k) %></h3><br>
     <%=k.subtitle%><br>
     <%=k.body%><br><br>
     <%= image_tag k.thumb_image if !k.thumb_image.nil? %>
-    <%=link_to "Edit", edit_portfolio_path(k.id) %>
-    <a href="/portfolios/<%= k.id %>/edit">Edit</a>
+    <%=link_to "Edit", edit_portfolio_path(k) %>
     <br>
     <hr>
     <br>
