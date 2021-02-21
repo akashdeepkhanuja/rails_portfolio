@@ -9,7 +9,7 @@
 
 <% @portfolio_items.each do |k| %>
 
-	<h3><%= link_to k.title, portfolio_path(k) %></h3><br>
+	<h3><%= link_to k.title, portfolio_show_path(k) %></h3><br>
     <%=k.subtitle%><br>
     <%=k.body%><br><br>
     <%= image_tag k.thumb_image if !k.thumb_image.nil? %>
