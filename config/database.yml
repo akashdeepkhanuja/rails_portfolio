@@ -23,13 +23,7 @@ default: &default
 
 development:
   <<: *default
-  adapter: postgresql
-  encoding: utf8
   database: DevcampPortfolio_development
-  host: localhost
-  pool: 5
-  username: railsdevuser
-  password: ask
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
