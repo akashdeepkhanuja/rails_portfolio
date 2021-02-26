@@ -3,23 +3,8 @@
 
  
 
-<%= link_to "Create new items", new_portfolio_path %><br >
+<%= link_to "Create new items", new_portfolio_url %><br >
 
 
 
-<% @portfolio_items.each do |k| %>
-
-	<h3><%= link_to k.title, portfolio_show_path(k) %></h3><br>
-    <%=k.subtitle%><br>
-    <%=k.body%><br><br>
-    <%= image_tag k.thumb_image if !k.thumb_image.nil? %>
-    <%=link_to "Edit", edit_portfolio_path(k) %>
-    <%= link_to 'Destroy', portfolio_path(k), method: :delete, data: { confirm: 'Are you sure?' } %>
-    <br>
-    <hr>
-    <br>
-
-
-
-	
-<%end%>
+<%= render partial: "portfolio_item", collection: @portfolio_items %>

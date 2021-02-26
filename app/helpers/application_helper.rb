@@ -10,4 +10,13 @@
       end
 
  	end
+    
+    def source_helper
+      if session[:source]
+        greet = "Thanks for visiting me from #{session[:source]}" 
+        content_tag(:p, greet, class: "source-greeting")
+      end
+    end
+ 	
 end
+ 
