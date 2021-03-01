@@ -3,7 +3,7 @@
 
  
 
-<%= link_to "Create new items", new_portfolio_path %><br >
+<%= link_to "Create new items", new_portfolio_path if logged_in?(:site_admin) %><br >
 
 
 
@@ -13,8 +13,8 @@
     <%=k.subtitle%><br>
     <%=k.body%><br><br>
     <%= image_tag k.thumb_image if !k.thumb_image.nil? %>
-    <%=link_to "Edit", edit_portfolio_path(k) %>
-    <%= link_to 'Destroy', portfolio_path(k), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%=link_to "Edit", edit_portfolio_path(k) if logged_in?(:site_admin)%>
+    <%= link_to 'Destroy', portfolio_path(k), method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin)%>
     <br>
     <hr>
     <br>

@@ -3,7 +3,7 @@
 
  
 
-<%= link_to "Create new items", new_portfolio_url %><br >
+<%= link_to "Create new items", new_portfolio_url if logged_in?(:site_admin) %><br >
 
 
 
